@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Canasta Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial; text-align: center; background:#0b3d2e; color:white; }
+    .card { display:inline-block; padding:8px; margin:4px; background:white; color:black; border-radius:8px; cursor:pointer; min-width:35px; }
+    #hand { margin-top:20px; }
+  </style>
+</head>
+<body>
+
+<h2>Canasta Online</h2>
+<h3 id="playersCount">عدد اللاعبين: 0 / 4</h3>
+<h3 id="turnInfo">بانتظار اكتمال اللاعبين...</h3>
+<h3 id="freezeInfo"></h3>
+
+<button onclick="draw()">سحب</button>
+<button onclick="createMeld()">دمج</button>
+<button onclick="takeDiscard()">أخذ المهملات</button>
+<button onclick="endRound()">انهاء الجولة</button>
+
+<h3>المهملات:</h3>
+<div id="discardPile"></div>
+
+<h3>يدك:</h3>
+<div id="hand"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script src="firebaseConfig.js"></script>
+<script src="engine.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
